@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1d1e22;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #666b7a;
+}
+/* typing effect*/
+.cursor {
+  display: inline-block;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+.typing {
+  animation: none;
+}
+
+@keyframes blink {
+  0% {
+    background-color: #ccc;
+  }
+  49% {
+    background-color: #ccc;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #ccc;
+  }
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  /* grid-template-rows: 1fr 1fr;
+  grid-gap: 5px; */
+  overflow: hidden;
+  background-color: #0d0c0c;
+}
+.container.view1 {
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 5px;
+}
+
+.container.view2 {
+  grid-template-columns: 0.6fr 1fr;
+  grid-gap: 5px;
+}
+
+.body {
+  overflow: hidden;
+}
+.coder {
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr);
+  grid-gap: 17px; */
+  padding: 10px;
+  padding-left: 15px;
+  padding-top: 0;
+}
+.coder.view1 {
+  height: 100%;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 17px;
+}
+.coder.view2 {
+  height: 108vh;
+  width: 100%;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 17px;
+  overflow: scroll;
+}
+
+.code {
+  background-color: #1d1e22;
+  /* max-height: 250px; */
+  width: 100%;
+}
+.code-editor {
+  height: 100%;
+  width: 100%;
+}
+.ace_content{
+  height: 100%;
+  width: 100%;
+}
+.code-type {
+  /* height: fit-content; */
+  width: 20%;
+  background-color: #1d1e22;
+  padding: 10px;
+  border-top: 2px solid #494b51;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+}
+.wrapper {
+  width: 99%;
+  background-color: #0d0c0c;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.copy {
+  padding: 5px 8px;
+  border-radius: 15px;
+  font-size: x-small;
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma,
+    Sans-Serif;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  background-color: #494b51;
+  color: #c2c3c7;
+}
+.copy:hover {
+  color: white;
+  background-color: #3c3d3fb6;
+}
+.heading {
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma,
+    Sans-Serif;
+  color: rgba(214, 212, 212, 0.766);
+  font-weight: bolder;
+  display: flex;
+  /* align-items: center; */
+  width: 90%;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.header {
+  background-color: #1d1e22;
+}
+.file-type-icon {
+  height: 17px;
+  width: 17px;
+}
+.ace_gutter {
+  background-color: #1d1e22 !important;
+}
+.ace_gutter-cell.ace_gutter-active-line {
+  background-color: #1d1e22 !important;
+}
+.output {
+  background-color: #f6f7f9;
+}
+.virtual-iframe {
+  height: 100%;
+  width: 100%;
+}
+.nav {
+  height: 60px;
+  width: 100%;
+  background-color: #0d0c0c;
+  border-bottom: 1px solid #31343b;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.logo {
+  height: 60px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  margin-right: 0.5rem;
+}
+.logo svg {
+  height: 30px;
+  width: 30px;
+  fill: #f6f7f9;
+}
+.name {
+  height: 27px;
+}
+.name h2 {
+  color: #f6f7f9;
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma,
+    Sans-Serif;
+  font-size: 1.2rem;
+}
+
+.about h4 {
+  color: #f6f7f9;
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma,
+    Sans-Serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.change-layout {
+  /* position: relative;
+  top: -102px;
+  left: 55rem; */
+  height: 45px;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  /* background-size: cover; */
+}
+.option {
+  height: 45px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-weight: 500;
+  border-style: none;
+  background-color: #51535b;
+  color: #f6f7f9;
+  padding: 10px 15px;
+  font-size: 1rem;
+}
+.option:hover {
+  background-color: #7d7f86;
+}
+
+
+/* @media only screen and (min-width: 2560px){
+  .code{
+   min-height: 600px;
+  }
+} */
+@media only screen and (min-width: 1440px){
+  .code{
+   min-height: 350px;
+  }
+}
+
+
